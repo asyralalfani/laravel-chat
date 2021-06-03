@@ -21,4 +21,5 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/chats', [App\Http\Controllers\ChatController::class, 'index'])->name('chats')->middleware('auth');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
